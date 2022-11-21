@@ -24,14 +24,16 @@ export default {
 
 </script>
 <template>
-    <JumbotronSection />
-    <BuildDream />
-    <ConstructAndCareer />
-    <StatisticalSection />
-    <LatestFeatured />
-    <LearnSection />
-    <EventsSection />
-    <LoveUs />
+    <main>
+        <JumbotronSection />
+        <BuildDream />
+        <ConstructAndCareer />
+        <StatisticalSection />
+        <LatestFeatured />
+        <LearnSection />
+        <EventsSection />
+        <LoveUs />
+    </main>
 </template>
 <style lang="scss" scoped>
 
