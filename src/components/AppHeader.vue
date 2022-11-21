@@ -50,7 +50,7 @@ export default {
 @use '../assets/scss/variables' as *;
 
 header {
-    background-color: #E9E6E3;
+    background-color: $md-jubo;
 
     .icons {
         svg {
