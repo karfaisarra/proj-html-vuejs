@@ -32,7 +32,7 @@ export default {
 
 .statistical {
     margin: 2rem 0;
-    background-color: $md-light-gray;
+    background-color: #FAF8F6;
 
 
     .col {
