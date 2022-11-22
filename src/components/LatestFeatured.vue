@@ -277,6 +277,8 @@ export default {
     }
 
     .card {
+        background-color: transparent;
+
         .card_top {
 
             .card-img-top {
