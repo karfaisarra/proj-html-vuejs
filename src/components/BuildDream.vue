@@ -37,7 +37,7 @@ export default {
 }
 </script>
 <template>
-    <section class="build_dream py-5 text-center">
+    <section class="build_dream text-center">
         <div class="container">
             <p class="text-uppercase mb-3">Start Learning Coding Languages</p>
             <h2 class="mb-5">Build Your Dream <span>TODAY</span></h2>
@@ -67,6 +67,8 @@ export default {
 @use '../assets/scss/variables' as *;
 
 .build_dream {
+    margin: 4rem 0 7rem 0;
+
     h2 {
         span {
             color: $md-success;

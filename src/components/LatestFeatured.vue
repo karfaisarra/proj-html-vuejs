@@ -130,7 +130,8 @@ export default {
 @use '../assets/scss/variables' as *;
 
 .latest {
-    background-color: #F6F6F6;
+    //background-color: ;
+    background-image: linear-gradient(white, #F6F6F6);
     padding-top: 3rem;
 
     .subtitle {
