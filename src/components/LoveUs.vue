@@ -101,7 +101,9 @@ export default {
 
         .body_card {
             background-color: $md-light;
-            aspect-ratio: 1/1;
+            width: 350px;
+            height: 350px;
+
 
             .text {
                 margin-top: 5rem;
