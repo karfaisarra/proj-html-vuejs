@@ -1,6 +1,72 @@
 <script>
 export default {
-    name: 'LatestFeatured'
+    name: 'LatestFeatured',
+    data() {
+        return {
+            cards: [
+                {
+                    img: 'course-02-480x298.jpg',
+                    price: '$40.00',
+                    userImg: '73ee246daf47502812ccefc84bf02898 (1).jpeg',
+                    userName: 'Blanche Fields',
+                    description: 'Learning to Write as a Professional Author',
+                    lessons: '20 Lessons',
+                    students: '50 Students'
+                },
+                {
+                    img: 'stock-full-hd-03-480x298.jpg',
+                    price: 'Free',
+                    userImg: 'd0d504142acfde820eef2f11feea6253 (1).jpeg',
+                    userName: 'Maggie Strickland',
+                    description: 'Costumer-centric Info-Tech Strategies',
+                    lessons: '24 Lessons',
+                    students: '769 Students'
+                },
+                {
+                    img: 'stock-full-hd-04-480x298.jpg',
+                    price: '$19.00',
+                    userImg: 'd0d504142acfde820eef2f11feea6253 (1).jpeg',
+                    userName: 'Maggie Strackland',
+                    description: 'Open Programming Courses for Everyone: Python',
+                    lessons: '17 Lessons',
+                    students: '62 Students'
+                },
+                {
+                    img: 'stock-full-hd-06-480x298.jpg',
+                    price: '$26.00',
+                    userImg: '73ee246daf47502812ccefc84bf02898 (1).jpeg',
+                    userName: 'Blanche Fields',
+                    description: 'Academic Listening and Note-talking',
+                    lessons: '14 Lessons',
+                    students: '67 Students'
+                },
+                {
+                    img: 'course-featured-image-01-480x298.jpg',
+                    price: '$39.00',
+                    userImg: '73ee246daf47502812ccefc84bf02898 (1).jpeg',
+                    userName: 'Blanche Fields',
+                    description: 'Master jQuery in a Short Period of Time',
+                    lessons: '6 Lessons',
+                    students: '51 Students'
+                },
+                {
+                    img: 'stock-full-hd-05-480x298.jpg',
+                    price: '$59.00',
+                    userImg: '73ee246daf47502812ccefc84bf02898 (1).jpeg',
+                    userName: 'Blanche Fields',
+                    description: 'Introduction to Javascript for Beginners',
+                    lessons: '14 Lessons',
+                    students: '76 Students'
+                },
+
+            ]
+        }
+    },
+    methods: {
+        getImageUrl(url) {
+            return new URL(`../assets/img/${url}`, import.meta.url).href
+        }
+    }
 }
 </script>
 <template>
@@ -9,97 +75,20 @@ export default {
             <p class="subtitle">Choose where you'd like to begin</p>
             <h2>Latest Featured <span>Courses</span></h2>
             <div class="row row-cols-lg-3 g-5">
-                <div class="col">
+                <div class="col" v-for="card in cards">
                     <div class="card border-0 ">
                         <div card_top>
-                            <img class="card-img-top" src="../assets/img/course-02-480x298.jpg" alt="">
-                            <div class="price ">
-                                $40.00
-                            </div>
-                        </div>
-                        <div class="card-text p-4">
-                            <div class="user">
-                                <img width="30" class="rounded-pill"
-                                    src="../assets/img/73ee246daf47502812ccefc84bf02898 (1).jpeg" alt="">
-                                <span>Blanche Fields</span>
-                            </div>
-                            <h5 class="w-75">Learning to Write as a Professional Author</h5>
-                            <div class="icons d-flex align-items-center gap-4">
-                                <div class="left d-flex align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
-                                        class="bi bi-file-earmark-arrow-down me-1" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z" />
-                                        <path
-                                            d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
-                                    </svg>
-                                    <span>20 Lessons</span>
-                                </div>
-                                <div class="right d-flex align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-person me-1" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
-                                    </svg>
-                                    <span>50 Students</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0 ">
-                        <div card_top>
-                            <img class="card-img-top" src="../assets/img/stock-full-hd-03-480x298.jpg" alt="">
-                            <div class="price ps-4 pe-4">
-                                Free
-                            </div>
-                        </div>
-                        <div class="card-text p-4">
-                            <div class="user">
-                                <img width="30" class="rounded-pill"
-                                    src="../assets/img/d0d504142acfde820eef2f11feea6253 (1).jpeg" alt="">
-                                <span>Maggie Strickland</span>
-                            </div>
-                            <h5 class="w-75">Costumer-centric Info-Tech Strategies</h5>
-                            <div class="icons d-flex align-items-center gap-4">
-                                <div class="left d-flex align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
-                                        class="bi bi-file-earmark-arrow-down me-1" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z" />
-                                        <path
-                                            d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
-                                    </svg>
-                                    <span>24 Lessons</span>
-                                </div>
-                                <div class="right d-flex align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-person me-1" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
-                                    </svg>
-                                    <span>769 Students</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0 ">
-                        <div card_top>
-                            <img class="card-img-top" src="../assets/img/stock-full-hd-04-480x298.jpg" alt="">
+                            <img class="card-img-top" :src="getImageUrl(card.img)" alt="">
                             <div class="price">
-                                $19.00
+                                {{ card.price }}
                             </div>
                         </div>
                         <div class="card-text p-4">
                             <div class="user">
-                                <img width="30" class="rounded-pill"
-                                    src="../assets/img/d0d504142acfde820eef2f11feea6253 (1).jpeg" alt="">
-                                <span>Maggie Strackland</span>
+                                <img width="30" class="rounded-pill" :src="getImageUrl(card.userImg)" alt="">
+                                <span>{{ card.userName }}</span>
                             </div>
-                            <h5 class="w-75">Open Programming Courses for Everyone: Python</h5>
+                            <h5 class="w-75">{{ card.description }}</h5>
                             <div class="icons d-flex align-items-center gap-4">
                                 <div class="left d-flex align-items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
@@ -109,7 +98,7 @@ export default {
                                         <path
                                             d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
                                     </svg>
-                                    <span>17 Lessons</span>
+                                    <span>{{ card.lessons }}</span>
                                 </div>
                                 <div class="right d-flex align-items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -117,121 +106,7 @@ export default {
                                         <path
                                             d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
                                     </svg>
-                                    <span>62 Students</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0 ">
-                        <div card_top>
-                            <img class="card-img-top" src="../assets/img/stock-full-hd-06-480x298.jpg" alt="">
-                            <div class="price">
-                                $26.00
-                            </div>
-                        </div>
-                        <div class="card-text p-4">
-                            <div class="user">
-                                <img width="30" class="rounded-pill"
-                                    src="../assets/img/73ee246daf47502812ccefc84bf02898 (1).jpeg" alt="">
-                                <span>Blanche Fields</span>
-                            </div>
-                            <h5 class="w-75">Academic Listening and Note-talking</h5>
-                            <div class="icons d-flex align-items-center gap-4">
-                                <div class="left d-flex align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
-                                        class="bi bi-file-earmark-arrow-down me-1" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z" />
-                                        <path
-                                            d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
-                                    </svg>
-                                    <span>14 Lessons</span>
-                                </div>
-                                <div class="right d-flex align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-person me-1" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
-                                    </svg>
-                                    <span>67 Students</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0 ">
-                        <div card_top>
-                            <img class="card-img-top" src="../assets/img/course-featured-image-01-480x298.jpg" alt="">
-                            <div class="price">
-                                $39.00
-                            </div>
-                        </div>
-                        <div class="card-text p-4">
-                            <div class="user">
-                                <img width="30" class="rounded-pill"
-                                    src="../assets/img/73ee246daf47502812ccefc84bf02898 (1).jpeg" alt="">
-                                <span>Blanche Fields</span>
-                            </div>
-                            <h5 class="w-75">Master jQuery in a Short Period of Time</h5>
-                            <div class="icons d-flex align-items-center gap-4">
-                                <div class="left d-flex align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
-                                        class="bi bi-file-earmark-arrow-down me-1" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z" />
-                                        <path
-                                            d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
-                                    </svg>
-                                    <span>6 Lessons</span>
-                                </div>
-                                <div class="right d-flex align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-person me-1" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
-                                    </svg>
-                                    <span>51 Students</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0 ">
-                        <div card_top>
-                            <img class="card-img-top" src="../assets/img/stock-full-hd-05-480x298.jpg" alt="">
-                            <div class="price">
-                                $59.00
-                            </div>
-                        </div>
-                        <div class="card-text p-4">
-                            <div class="user">
-                                <img width="30" class="rounded-pill"
-                                    src="../assets/img/73ee246daf47502812ccefc84bf02898 (1).jpeg" alt="">
-                                <span>Blanche Fields</span>
-                            </div>
-                            <h5 class="w-75">Introduction to Javascript for Beginners</h5>
-                            <div class="icons d-flex align-items-center gap-4">
-                                <div class="left d-flex align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
-                                        class="bi bi-file-earmark-arrow-down me-1" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z" />
-                                        <path
-                                            d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
-                                    </svg>
-                                    <span>14 Lessons</span>
-                                </div>
-                                <div class="right d-flex align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-person me-1" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
-                                    </svg>
-                                    <span>76 Students</span>
+                                    <span>{{ card.students }}</span>
                                 </div>
                             </div>
                         </div>
@@ -291,7 +166,10 @@ export default {
             top: 0;
             right: 0;
             background-color: $md-soft-primary;
-            padding: 0.25rem 0.5rem;
+            padding: 0.5rem 0.75rem;
+            width: 90px;
+            height: 40px;
+            text-align: center;
             color: $md-light;
             border-radius: 0 7px 0 7px;
             font-weight: bold;
