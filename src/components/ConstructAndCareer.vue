@@ -149,11 +149,9 @@ export default {
 
         h2 {
             padding-bottom: 1.5rem;
-            font-weight: 600;
 
             span {
                 color: $md-success;
-                font-weight: 300;
             }
         }
     }

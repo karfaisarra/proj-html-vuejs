@@ -9,7 +9,7 @@ export default {
             <div class="top row align-items-center mt-5">
                 <div class="col-4">
                     <p class="subtitle">Why hesitate to Register?</p>
-                    <h2 class="w-50">Learn At Your Own <span>Pace</span></h2>
+                    <h2>Learn At Your Own <span>Pace</span></h2>
                     <p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                             class="bi bi-check" viewBox="0 0 16 16">
@@ -60,7 +60,7 @@ export default {
                     </div>
                 </div>
                 <div class="col-4">
-                    <p class="subtitle">What are you looking for</p>
+                    <p class="subtitle">What are you looking for?</p>
                     <h2>Learn on your <span>mobile</span> anytime!</h2>
                     <p>Save lessons for later and revise or write notes at any time and on multiple devices on your way.
                         Never interfer with activities of enjoyment or other precious moments.</p>
@@ -108,6 +108,12 @@ export default {
     }
 
     .top {
+        .col-4 {
+            h2 {
+                width: 70%;
+            }
+        }
+
         .col-6 {
             position: relative;
             text-align: right;
