@@ -171,7 +171,7 @@ export default {
             height: 40px;
             text-align: center;
             color: $md-light;
-            border-radius: 0 7px 0 7px;
+            border-radius: 0 5px 0 5px;
             font-weight: bold;
         }
 
@@ -198,6 +198,7 @@ export default {
         &:hover {
             background-color: $md-light;
             box-shadow: 5px 5px 5px 5px #8888880c;
+            cursor: pointer;
         }
     }
 
@@ -210,6 +211,11 @@ export default {
             padding: 0.5rem 2.5rem;
             color: $md-light;
             font-weight: 500;
+
+            &:hover {
+                color: $md-soft-primary;
+                background-color: $md-light;
+            }
         }
     }
 }

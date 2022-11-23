@@ -118,6 +118,10 @@ export default {
                 color: $md-dark-gray;
             }
 
+            &:hover {
+                cursor: pointer;
+            }
+
         }
     }
 
@@ -133,6 +137,10 @@ export default {
                 color: black;
                 font-size: 100px;
             }
+        }
+
+        &:hover {
+            cursor: pointer;
         }
 
     }
@@ -154,6 +162,11 @@ export default {
             padding: 0.5rem 3rem;
             color: $md-light;
             font-weight: 500;
+
+            &:hover {
+                color: $md-soft-primary;
+                background-color: $md-light;
+            }
         }
 
         .left {

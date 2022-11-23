@@ -109,7 +109,7 @@ export default {
                                 </ul>
                             </div>
                             <div class="col">
-                                <ul class="list-unstyled mt-4">
+                                <ul class="list-unstyled my_mt">
                                     <li v-for="link in footerLink.col2"><a :href="link.link">{{ link.text }}</a></li>
                                 </ul>
                             </div>
@@ -151,8 +151,13 @@ export default {
 @use '../assets/scss/variables' as *;
 
 .top {
+    h6 {
+        margin-bottom: 1rem;
+    }
+
     li {
         color: $md-dark-gray;
+        margin-bottom: 1rem;
 
         a {
             color: $md-dark-gray;
@@ -168,6 +173,10 @@ export default {
         svg {
             color: $md-dark-gray;
         }
+    }
+
+    .my_mt {
+        margin-top: 2.2rem;
     }
 }
 

@@ -105,6 +105,11 @@ export default {
         padding: 0.5rem 2.5rem;
         color: $md-light;
         font-weight: 500;
+
+        &:hover {
+            color: $md-soft-primary;
+            background-color: $md-light;
+        }
     }
 
     .top {

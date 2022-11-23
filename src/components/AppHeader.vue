@@ -12,7 +12,7 @@ export default {
     <header class="py-3">
         <div class="container">
             <nav class="navbar">
-                <div class="container-fluid d-flex justify-content-between">
+                <div class="container-fluid d-flex justify-content-between ">
                     <div class="logo">
                         <img width="150" src="../assets/img/dark-logo.png" alt="">
                     </div>
@@ -52,14 +52,23 @@ export default {
 header {
     background-color: $md-jubo;
 
+    .logo {
+        img {
+            position: relative;
+            top: -15px;
+        }
+    }
+
     .icons {
         svg {
-            color: $md-darker;
+            color: black;
         }
     }
 
     .searchBox {
-        padding: 0.25rem;
+        position: relative;
+        top: -10px;
+        padding: 0.75rem;
         background-color: $md-light;
         border-radius: 5px;
 

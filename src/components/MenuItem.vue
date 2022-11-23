@@ -66,18 +66,18 @@ ul {
             margin-right: 0.25rem;
             font-size: 14px;
             font-weight: 600;
-            color: $md-darker;
+            color: black;
         }
 
         svg {
             cursor: pointer;
             margin-right: 0.25rem;
-            color: $md-darker;
+            color: black;
         }
     }
 
     .active {
-        color: gray;
+        font-size: 16px;
     }
 }
 </style>

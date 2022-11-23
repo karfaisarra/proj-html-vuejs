@@ -1,6 +1,11 @@
 <script>
 export default {
-    name: 'ConstructAndCareer'
+    name: 'ConstructAndCareer',
+    data() {
+        return {
+
+        }
+    }
 }
 </script>
 <template>
@@ -139,6 +144,7 @@ export default {
 @use '../assets/scss/variables' as *;
 
 .construct_and_career {
+
     .col-5 {
         .subtitle {
             color: $md-dark-gray;
@@ -157,6 +163,7 @@ export default {
     }
 
     .col-6 {
+        height: 100%;
         position: relative;
 
         .secondImg {
