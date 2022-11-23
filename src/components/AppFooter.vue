@@ -1,6 +1,58 @@
 <script>
 export default {
-    name: 'AppFooter'
+    name: 'AppFooter',
+    data() {
+        return {
+            footerLink: {
+                col1: [
+                    {
+                        link: '#',
+                        text: 'Start here'
+                    },
+                    {
+                        link: '#',
+                        text: 'Blog'
+                    },
+                    {
+                        link: '#',
+                        text: 'About us'
+                    },
+                ],
+                col2: [
+                    {
+                        link: '#',
+                        text: 'Success story'
+                    },
+                    {
+                        link: '#',
+                        text: 'Courses'
+                    },
+                    {
+                        link: '#',
+                        text: 'Contact us'
+                    },
+                ],
+                col3: [
+                    {
+                        link: '#',
+                        text: 'Memberchip'
+                    },
+                    {
+                        link: '#',
+                        text: 'Purchase guide'
+                    },
+                    {
+                        link: '#',
+                        text: 'Privacy policy'
+                    },
+                    {
+                        link: '#',
+                        text: 'Team of services'
+                    },
+                ],
+            }
+        }
+    }
 }
 
 </script>
@@ -53,25 +105,18 @@ export default {
                             <div class="col">
                                 <h6>Explore</h6>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">Start here</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">About us</a></li>
+                                    <li v-for="link in footerLink.col1"><a :href="link.link">{{ link.text }}</a></li>
                                 </ul>
                             </div>
                             <div class="col">
                                 <ul class="list-unstyled mt-4">
-                                    <li><a href="#">Success story</a></li>
-                                    <li><a href="#">Courses</a></li>
-                                    <li><a href="#">Contact us</a></li>
+                                    <li v-for="link in footerLink.col2"><a :href="link.link">{{ link.text }}</a></li>
                                 </ul>
                             </div>
                             <div class="col">
                                 <h6 class="">Information</h6>
                                 <ul class="list-unstyled">
-                                    <li><a href="#">Memberchip </a></li>
-                                    <li><a href="#">Purchase guide</a></li>
-                                    <li><a href="#">Privacy policy</a></li>
-                                    <li><a href="#">Team of services</a></li>
+                                    <li v-for="link in footerLink.col3"><a :href="link.link">{{ link.text }}</a></li>
                                 </ul>
                             </div>
                         </div>
