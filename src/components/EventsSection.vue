@@ -1,6 +1,49 @@
 <script>
 export default {
-    name: 'EventsSection'
+    name: 'EventsSection',
+    data() {
+        return {
+            cards: [
+                {
+                    location: 'Texas, US',
+                    descrioption: 'Storytelling Workshop',
+                    day: '22',
+                    month: 'NOV',
+                },
+                {
+                    location: 'New York, US',
+                    descrioption: 'Painting Art Contest 2020',
+                    day: '10',
+                    month: 'OCT',
+                },
+                {
+                    location: 'Hamburg, Germany',
+                    descrioption: 'International Art Fair 2020',
+                    day: '23',
+                    month: 'NOV',
+                },
+                {
+                    location: 'Illinois, US',
+                    descrioption: 'Street Performance: Call for Artist',
+                    day: '15',
+                    month: 'DEC',
+                },
+                {
+                    location: 'Illinois, US',
+                    descrioption: 'Consumer Food Safety Education Conference',
+                    day: '22',
+                    month: 'JUL',
+                },
+                {
+                    location: 'Dubai, UAE',
+                    descrioption: 'How meditation improve your mental health?',
+                    day: '12',
+                    month: 'AUG',
+                },
+
+            ]
+        }
+    }
 }
 </script>
 <template>
@@ -9,7 +52,7 @@ export default {
             <p class="subtitle">get in contact now</p>
             <h2>Upcoming <span>Events</span></h2>
             <div class="row row-cols-lg-2 g-4">
-                <div class="col">
+                <div class="col" v-for="card in cards">
                     <div class="card p-4">
                         <div class="d-flex justify-content-between">
                             <div class="left">
@@ -20,128 +63,13 @@ export default {
                                             d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
                                         <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                                     </svg>
-                                    <span>Texas, US</span>
+                                    <span>{{ card.location }}</span>
                                 </p>
-                                <h5>Storytelling Workshop</h5>
+                                <h5 class="">{{ card.descrioption }}</h5>
                             </div>
                             <div class="right text-center">
-                                <h2>22</h2>
-                                <h6>NOV</h6>
-                                <a href="#" class="btn my_btn">Get ticket</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card p-4">
-                        <div class="d-flex justify-content-between ">
-                            <div class="left">
-                                <p class="country d-flex align-items-center gap-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
-                                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                    </svg>
-                                    <span>New York, US</span>
-                                </p>
-                                <h5>Painting Art Contest 2020</h5>
-                            </div>
-                            <div class="right text-center">
-                                <h2>10</h2>
-                                <h6>OCT</h6>
-                                <a href="#" class="btn my_btn">Get ticket</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card p-4">
-                        <div class="d-flex justify-content-between">
-                            <div class="left">
-                                <p class="country d-flex align-items-center gap-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
-                                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                    </svg>
-                                    <span>Hamburg, Germany</span>
-                                </p>
-                                <h5>International Art Fair 2020</h5>
-                            </div>
-                            <div class="right text-center">
-                                <h2>23</h2>
-                                <h6>NOV</h6>
-                                <a href="#" class="btn my_btn">Get ticket</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card p-4">
-                        <div class="d-flex justify-content-between">
-                            <div class="left">
-                                <p class="country d-flex align-items-center gap-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
-                                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                    </svg>
-                                    <span>Illinois, US</span>
-                                </p>
-                                <h5>Street Performance: Call for Artist</h5>
-                            </div>
-                            <div class="right text-center">
-                                <h2>15</h2>
-                                <h6>DEC</h6>
-                                <a href="#" class="btn my_btn">Get ticket</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card p-4">
-                        <div class="d-flex justify-content-between">
-                            <div class="left">
-                                <p class="country d-flex align-items-center gap-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
-                                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                    </svg>
-                                    <span>Illinois, US</span>
-                                </p>
-                                <h5 class="w-75">Consumer Food Safety Education Conference</h5>
-                            </div>
-                            <div class="right text-center">
-                                <h2>22</h2>
-                                <h6>JUL</h6>
-                                <a href="#" class="btn my_btn">Get ticket</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card p-4">
-                        <div class="d-flex justify-content-between">
-                            <div class="left">
-                                <p class="country d-flex align-items-center gap-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
-                                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                    </svg>
-                                    <span>Dubai, UAE</span>
-                                </p>
-                                <h5 class="w-75">How meditation improve your mental health?</h5>
-                            </div>
-                            <div class="right text-center">
-                                <h2>12</h2>
-                                <h6>AUG</h6>
+                                <h2>{{ card.day }}</h2>
+                                <h6>{{ card.month }}</h6>
                                 <a href="#" class="btn my_btn">Get ticket</a>
                             </div>
                         </div>
@@ -193,7 +121,6 @@ export default {
         .left {
             .country {
 
-                //margin-bottom: ;
                 span,
                 svg {
                     color: $md-dark-gray;
@@ -222,7 +149,7 @@ export default {
 
             .my_btn {
                 background-color: $md-soft-primary;
-                padding: 0.25rem 2.5rem;
+                padding: 0.25rem 1.5rem;
                 color: $md-light;
                 font-weight: 500;
             }
