@@ -10,7 +10,7 @@ export default {
             <h2>Upcoming <span>Events</span></h2>
             <div class="row row-cols-lg-2 g-4">
                 <div class="col">
-                    <div class="card p-4 border-0">
+                    <div class="card p-4">
                         <div class="d-flex justify-content-between">
                             <div class="left">
                                 <p class="country d-flex align-items-center gap-1">
@@ -33,7 +33,7 @@ export default {
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card p-4 border-0">
+                    <div class="card p-4">
                         <div class="d-flex justify-content-between ">
                             <div class="left">
                                 <p class="country d-flex align-items-center gap-1">
@@ -56,7 +56,7 @@ export default {
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card p-4 border-0">
+                    <div class="card p-4">
                         <div class="d-flex justify-content-between">
                             <div class="left">
                                 <p class="country d-flex align-items-center gap-1">
@@ -79,7 +79,7 @@ export default {
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card p-4 border-0">
+                    <div class="card p-4">
                         <div class="d-flex justify-content-between">
                             <div class="left">
                                 <p class="country d-flex align-items-center gap-1">
@@ -102,7 +102,7 @@ export default {
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card p-4 border-0">
+                    <div class="card p-4">
                         <div class="d-flex justify-content-between">
                             <div class="left">
                                 <p class="country d-flex align-items-center gap-1">
@@ -125,7 +125,7 @@ export default {
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card p-4 border-0">
+                    <div class="card p-4">
                         <div class="d-flex justify-content-between">
                             <div class="left">
                                 <p class="country d-flex align-items-center gap-1">
@@ -188,6 +188,7 @@ export default {
 
     .card {
         background-color: #F8F8F8;
+        border: 0 solid transparent;
 
         .left {
             .country {
@@ -224,6 +225,16 @@ export default {
                 padding: 0.25rem 2.5rem;
                 color: $md-light;
                 font-weight: 500;
+            }
+        }
+
+        &:hover {
+            background-color: $md-light;
+            box-shadow: 5px 5px 5px 5px #8888880c;
+            border-left: 3px solid $md-soft-primary;
+
+            .my_btn {
+                background-color: $md-purple;
             }
         }
     }

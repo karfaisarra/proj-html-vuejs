@@ -316,6 +316,11 @@ export default {
                 font-weight: 500;
             }
         }
+
+        &:hover {
+            background-color: $md-light;
+            box-shadow: 5px 5px 5px 5px #8888880c;
+        }
     }
 
     .call_to_action {

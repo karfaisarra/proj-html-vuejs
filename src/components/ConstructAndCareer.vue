@@ -8,7 +8,8 @@ export default {
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-6 text-center ">
-                    <img width="300" src="../assets/img/about-us-03-image-01.png" alt="">
+                    <img class="firstImg" width="300" src="../assets/img/about-us-03-image-01.png" alt="">
+                    <img class="secondImg" width="300" src="../assets/img/underlay-shape-lilla.svg" alt="">
                 </div>
                 <div class="col-5">
                     <p class="subtitle">Deram with Maxcoach</p>
@@ -148,19 +149,24 @@ export default {
 
         h2 {
             padding-bottom: 1.5rem;
+            font-weight: 600;
 
             span {
                 color: $md-success;
-                font-weight: 350;
+                font-weight: 300;
             }
         }
     }
 
     .col-6 {
-        background-image: url(../assets/img/underlay-shape-lilla.svg);
-        background-repeat: no-repeat;
-        background-position: left;
-        background-size: contain;
+        position: relative;
+
+        .secondImg {
+            position: absolute;
+            top: 75px;
+            left: 70px;
+            z-index: -1;
+        }
     }
 
     .block {

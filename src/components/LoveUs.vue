@@ -89,6 +89,7 @@ export default {
     }
 
     .my_card {
+        margin-top: -5rem;
         padding: 2rem;
 
         //box-shadow: ;

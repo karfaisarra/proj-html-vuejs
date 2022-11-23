@@ -44,17 +44,19 @@ export default {
                     </p>
                     <a href="#" class="btn my_btn">Get started for free</a>
                 </div>
-                <div class="col-6 text-end">
-                    <img width="330" src="../assets/img/home-5-image-01.png" alt="">
-                    <img src="../assets/img/maxcoach-shape-05-150x150.png" alt="">
+                <div class="col-6">
+                    <img class="firstImg" width="300" src="../assets/img/home-5-image-01.png" alt="">
+                    <img class="secondImg" src="../assets/img/maxcoach-shape-05-150x150.png" alt="">
+                    <img class="therdImg" width="330" height="300" src="../assets/img/underlay-shape-grey.svg" alt="">
                 </div>
             </div>
-            <div class="bottom row align-items-center mb-5">
+            <div class="bottom row align-items-center ">
                 <div class="col-6">
                     <div class="images">
                         <img class="firstImg" width="300" src="../assets/img/home-5-image-02.png" alt="">
                         <img class="secondImg" src="../assets/img/maxcoach-shape-07-150x150.png" alt="">
                         <img class="therdImg" src="../assets/img/maxcoach-shape-01.png" alt="">
+                        <img class="forImg" width="400" src="../assets/img/underlay-shape-grey.svg" alt="">
                     </div>
                 </div>
                 <div class="col-4">
@@ -105,14 +107,29 @@ export default {
         font-weight: 500;
     }
 
-    .col-6 {
-        margin-top: 5rem;
-        background-image: url(../assets/img/underlay-shape-grey.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
+    .top {
+        .col-6 {
+            position: relative;
+            text-align: right;
+
+            .secondImg {
+                position: relative;
+                top: 80px;
+                left: -60px;
+            }
+
+            .therdImg {
+                position: absolute;
+                top: 80px;
+                left: 115px;
+                z-index: -1;
+            }
+        }
     }
 
     .bottom {
+        margin: 10rem 0;
+
         .col-6 {
             .images {
                 position: relative;
@@ -128,14 +145,21 @@ export default {
             .secondImg {
                 position: absolute;
                 bottom: 20px;
-                left: 60%;
+                left: 62%;
                 z-index: -1;
             }
 
             .therdImg {
                 position: absolute;
-                top: 30%;
-                left: -15%;
+                top: 35%;
+                left: -12%;
+            }
+
+            .forImg {
+                position: absolute;
+                z-index: -1;
+                top: 8%;
+                left: 15px;
             }
         }
     }

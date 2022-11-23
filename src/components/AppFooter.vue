@@ -88,6 +88,17 @@ export default {
                 </svg>
                 2022 Maxcoach. All Rights Reserved
             </p>
+            <div class="arrow d-flex justify-content-end">
+                <div class="icon d-flex justify-content-center align-items-center rounded-pill">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-arrow-up" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 </template>
@@ -101,6 +112,10 @@ export default {
         a {
             color: $md-dark-gray;
             text-decoration: none;
+
+            &:hover {
+                color: rgb(83, 83, 83);
+            }
         }
     }
 
@@ -115,5 +130,20 @@ export default {
     p {
         color: $md-dark-gray;
     }
+
+    .arrow {
+        margin: -20px 2rem 2rem 0;
+
+        .icon {
+            background-color: $md-soft-primary;
+            width: 40px;
+            height: 40px;
+
+            a {
+                color: white;
+            }
+        }
+    }
+
 }
 </style>

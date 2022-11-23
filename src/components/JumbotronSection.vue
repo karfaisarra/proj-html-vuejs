@@ -15,7 +15,7 @@ export default {
                             Learn any coding program in distance and for a reasonable fee. You don't have to
                             struggle alone, you've got our assistance and help.
                         </p>
-                        <div href="#" class="my_btn btn d-flex gap-2 align-items-center justify-content-center w-50">
+                        <a href="#" class="btn my_btn d-flex justify-content-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-download" viewBox="0 0 16 16">
                                 <path
@@ -24,7 +24,7 @@ export default {
                                     d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
                             </svg>
                             Download free E-book
-                        </div>
+                        </a>
                     </div>
 
                 </div>
@@ -53,19 +53,24 @@ export default {
     }
 
     .details {
-        .my_btn {
-            background-color: $md-soft-primary;
-            color: $md-light;
-            font-weight: 600;
-            font-size: 11px
-        }
 
         p {
             color: $md-dark-gray;
         }
     }
 
-    //background-image: url(../assets/img/jumbo-overlay.svg);
+    .my_btn {
+        background-color: $md-soft-primary;
+        color: $md-light;
+        font-weight: 600;
+        font-size: 11px;
+        padding: 0.5rem 2rem;
+        width: 220px;
+
+        & :hover {
+            background-color: $md-purple;
+        }
+    }
 
 }
 </style>

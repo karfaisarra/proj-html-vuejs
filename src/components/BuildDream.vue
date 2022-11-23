@@ -16,7 +16,7 @@ export default {
                         <p>Get teamed up with the specialists who work and teach coding for years at famous
                             universities.</p>
                         <h6>
-                            <a href="#">
+                            <a href="#" class="btn my_btn">
                                 Start now
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -35,7 +35,7 @@ export default {
                             Learn to start building a webpage from scratch. You decide you own pace, course and speed.
                         </p>
                         <h6>
-                            <a href="#">
+                            <a href="#" class="btn my_btn">
                                 Start now
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -54,7 +54,7 @@ export default {
                             Learn are encouraged to study the mechanism and structure of system administration.
                         </p>
                         <h6>
-                            <a href="#">
+                            <a href="#" class="btn my_btn">
                                 Start now
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -74,7 +74,7 @@ export default {
                             self-assertiveness.
                         </p>
                         <h6>
-                            <a href="#">
+                            <a href="#" class="btn my_btn">
                                 Start now
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -115,6 +115,16 @@ export default {
             text-decoration: none;
             font-weight: bold;
             font-size: 13px;
+        }
+    }
+
+    .my_btn {
+        padding: 0.5rem 4rem;
+
+        &:hover {
+            background-color: #F8F8F8;
+            color: $md-soft-primary;
+            padding: 0.5rem 4rem;
         }
     }
 }

@@ -14,7 +14,7 @@ export default {
             <nav class="navbar">
                 <div class="container-fluid d-flex justify-content-between">
                     <div class="logo">
-                        <img width="110" src="../assets/img/dark-logo.png" alt="">
+                        <img width="150" src="../assets/img/dark-logo.png" alt="">
                     </div>
                     <div class="menu d-flex ">
                         <MenuItem />
@@ -32,7 +32,7 @@ export default {
                             </svg>
                         </div>
                         <div class="searchBox d-flex align-items-center">
-                            <input type="text" class="border-0" placeholder="Search...">
+                            <input type="text" class="border-0 " placeholder="Search...">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-search" viewBox="0 0 16 16">
                                 <path

@@ -66,7 +66,7 @@ ul {
         a {
             text-decoration: none;
             margin-right: 0.25rem;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 600;
             color: $md-darker;
         }
